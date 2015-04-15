@@ -8,14 +8,20 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+var win:UIWindow!
 
-    var window: UIWindow?
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {	
+    
+    
+    var window: UIWindow!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+       self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window.rootViewController = LoginViewController()
+        self.window.makeKeyAndVisible()
+        win = self.window
         return true
     }
 
