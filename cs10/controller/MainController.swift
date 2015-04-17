@@ -6,14 +6,11 @@
 //  Copyright (c) 2014年 hdr. All rights reserved.
 //
 
-import UIkit
+import UIKit
 
 class MainController :UITabBarController{
     let captions=["检测","服务","系统","我"]
     let tabbarHeight = CGFloat(49.0)
-    override  init(){
-        super.init()
-    }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

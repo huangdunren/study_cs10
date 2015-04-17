@@ -45,7 +45,7 @@ public enum JSON {
         case let number as NSNumber:
             self = .ScalarNumber(number)
         case let string as NSString:
-            self = .ScalarString(string)
+            self = .ScalarString(string as String)
         case let null as NSNull:
             self = .Null(nil)
         case let array as NSArray:
@@ -57,8 +57,8 @@ public enum JSON {
         case let dictionary as NSDictionary:
             var aJSONDictionary = Dictionary<String, JSON>()
             for (key : AnyObject, value : AnyObject) in dictionary {
-                if let key = key as? NSString {
-                    aJSONDictionary[key] = JSON(object: value)
+                if let a_key = key as? NSString {
+                    aJSONDictionary[a_key as String] = JSON(object: value)
                 }
             }
             self = .Mapping(aJSONDictionary)

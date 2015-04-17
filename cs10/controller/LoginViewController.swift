@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-     override init(){
+     init(){
         super.init(nibName: "LoginViewController",bundle: nil);
     }
 

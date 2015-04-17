@@ -30,14 +30,14 @@ class HttpUtils
         req.POST(url, parameters:paras, success:{
             (res:HTTPResponse) ->Void
             in
-            HttpUtils.success(res,onSuccess)
+            HttpUtils.success(res,onSuccess: onSuccess)
             }, failure: HttpUtils.onfailure)
         
     }
     
     class func success(res:HTTPResponse,onSuccess:(JSON->Void)){
         if res.responseObject != nil {
-            let data = res.responseObject as NSData
+            let data = res.responseObject as! NSData
             let json = JSON(data:data)
             let status = json["status"]
             println(status["code"])

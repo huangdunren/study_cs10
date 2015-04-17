@@ -9,11 +9,7 @@
 import UIKit
 
 class MeasureController :UIViewController {
-    
-    override init() {
-        super.init()
-    }
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
